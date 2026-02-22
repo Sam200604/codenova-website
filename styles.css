@@ -1,0 +1,110 @@
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#0a2a66;
+color:black;
+}
+.hero{
+color:white;
+}
+
+.center{
+text-align:center;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+flex-direction:column;
+}
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.btn{
+background:white;
+color:#0a2a66;
+padding:12px 24px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+border:none;
+cursor:pointer;
+margin-top:20px;
+}
+
+.glow{
+box-shadow:0 0 15px rgba(255,255,255,0.7);
+}
+transition:0.3s;
+}
+
+.glow:hover{
+transform:scale(1.05);
+box-shadow:0 0 30px rgba(255,255,255,0.9);
+}
+
+.card-container{
+display:flex;
+justify-content:center;
+gap:25px;
+padding:60px;
+flex-wrap:wrap;
+}
+
+.card{
+background:#123a8c;
+padding:25px;
+border-radius:15px;
+width:260px;
+text-decoration:none;
+color:white;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.fade-in{
+animation:fade 1.5s ease-in;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+.contact-box{
+max-width:600px;
+margin:40px auto;
+background:white;
+color:black;
+padding:30px;
+border-radius:15px;
+}
+
+input,textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+border-radius:8px;
+border:none;
+}
+
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+justify-content:center;
+align-items:center;
+}
+
+.popup-content{
+background:white;
+color:black;
+padding:40px;
+border-radius:15px;
+text-align:center;
+}
