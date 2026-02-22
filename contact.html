@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+<link rel="stylesheet" href="styles.css">
+<script>
+function getService(){
+ const params=new URLSearchParams(window.location.search);
+ document.getElementById("service").innerText=params.get("service");
+}
+
+function submitForm(e){
+ e.preventDefault();
+ document.getElementById("thankyou").style.display="flex";
+}
+</script>
+</head>
+
+<body onload="getService()">
+
+<h1 class="center">Contact CodeNova Technologies</h1>
+
+<div class="contact-box fade-in">
+
+<h2>Selected Service: <span id="service"></span></h2>
+
+<h3>Contact Our Team</h3>
+
+<p>Samprikta Sengupta:
+<a href="tel:+919875538575">+91 98755 38575</a></p>
+
+
+<h3>Team Contacts</h3>
+
+<p><strong>Samprikta Sengupta</strong><br>
+<a href="mailto:sampriktasengupta73@email.com">sampriktasengupta73@email.com</a></p>
+
+
+<h3>Send an Enquiry</h3>
+
+<form onsubmit="submitForm(event)">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Question"></textarea>
+<button class="btn glow">Submit Enquiry</button>
+</form>
+
+</div>
+
+<div id="thankyou" class="popup">
+<div class="popup-content">
+<h2>✅ Thank You!</h2>
+<p>Our team will contact you soon.</p>
+<a class="btn" href="index.html">Back to Home</a>
+</div>
+</div>
+
+</body>
+</html>
